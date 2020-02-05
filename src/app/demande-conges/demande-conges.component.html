@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 [ngStyle]="{'text-align':'center'}">Mes demandes de congés</h2>
+      <p [ngStyle]="{'text-align':'center'}">Veuillez selectionner vos jours de congés sur le calendrier et appuyer sur le bouton "Valider"</p>
+      <full-calendar defaultView="dayGridMonth" [plugins]="calendarPlugins" selectable = true></full-calendar>
+      <button class="btn btn-primary" >Valider</button>
+    </div>
+  </div>
+</div>
