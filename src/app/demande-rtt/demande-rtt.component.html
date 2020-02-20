@@ -4,8 +4,17 @@
     <div class="col-xs-12">
       <h2 [ngStyle]="{'text-align':'center'}">Mes demandes de RTT</h2>
       <p [ngStyle]="{'text-align':'center'}">Veuillez selectionner vos jours de RTT sur le calendrier et appuyer sur le bouton "Valider"</p>
-      <full-calendar defaultView="dayGridMonth" [plugins]="calendarPlugins"></full-calendar>
       <button class="btn btn-primary" >Valider</button>
+      <div>
+        <div [ngStyle]="{'float':'left','width':'60%','margin':'1em 0'}">
+          <full-calendar [locales]="local" defaultView="dayGridMonth" [plugins]="calendarPlugins" selectable = true (eventClick)="function($event)"></full-calendar>
+        </div>
+        <div [ngStyle]="{'float':'left','width':'30%','margin':'1em 0','margin-left':'10px'}">
+          <img [ngStyle]="{'float':'left'}" src="../../assets/images/CarreVert.png"><p [ngStyle]="{'margin-bottom':'50px','margin-left':'55px'}">La demande a été accepté</p>
+          <img [ngStyle]="{'float':'left'}" src="../../assets/images/CarreOrange.png"><p [ngStyle]="{'margin-bottom':'50px','margin-left':'55px'}">La demande est en cours de traitement</p>
+          <img [ngStyle]="{'float':'left'}" src="../../assets/images/CarreRouge.png"><p [ngStyle]="{'margin-bottom':'50px','margin-left':'55px'}">La demande a été refusé</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
